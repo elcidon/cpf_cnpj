@@ -37,7 +37,43 @@ Validador de CPF e CNPJ.
   '97373439000100'
   
   cnpj.validate()
-  True
+  True]
+```
+
+## You can use just one class to validate a CPF or CNPJ
+
+usage:
+```python
+from cpf_cnpj import CpfCnpj
+
+# CNPJ
+document = CpfCnpj.factory("95.448.834/0001-70")
+
+document.validate()
+True
+
+document.cleaning()
+'95448834000170'
+
+document = CpfCnpj.factory("95448834000170")
+
+document.format()
+'95.448.834/0001-70'
+
+#CPF
+document = CpfCnpj.factory("335.101.310-88")
+
+document.validate()
+True
+
+document.cleaning()
+'33510131088'
+
+document = CpfCnpj.factory("33510131088")
+
+document.format()
+'335.101.310-88'
+
 ```
 
 **Tests**
