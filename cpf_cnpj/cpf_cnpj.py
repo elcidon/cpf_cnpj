@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 from typing import Dict, Union
-
-from utils import cleaning
+from .utils import cleaning
 
 
 class BaseCpfCnpj:
